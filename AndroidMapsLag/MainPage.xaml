@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+               xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             Appearing="ContentPage_Appearing"
+             x:Class="AndroidMapsLag.MainPage">
+
+
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Navigation Header Here"></Label>
+            <maps:Map x:Name="mapctrl" HeightRequest="410" WidthRequest="670" IsShowingUser="True">
+
+            </maps:Map>
+            <dxco:BottomSheet x:Name="bottomSheet"
+                               BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Background}}"
+                         CornerRadius="30"
+                         HalfExpandedRatio="0.3"
+                         AllowDismiss="True"
+                         ShowGrabber="True"
+                         IsModal="False">
+                <!--#region BottomSheetContent-->
+                <VerticalStackLayout Padding="4,20,4,4">
+                    <dxco:SimpleButton Text="Share" />
+                    <dxco:SimpleButton Text="Share" />
+                    <dxco:SimpleButton Text="Share" />
+                </VerticalStackLayout>
+                <!--#endregion-->
+            </dxco:BottomSheet>
+        </VerticalStackLayout>
+
+</ContentPage>
